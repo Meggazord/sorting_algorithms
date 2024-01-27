@@ -1,27 +1,38 @@
 #include <stddef.h>
 #include "sort.h"
 
-void swap(int a, intb) {
-    int temp = *a;
+void swap(int a, intb)
+{
+    int temp;
+
+    temp = *a;
     a =b;
     b = temp;
 }
 
-void selection_sort(intarray, size_t size) {
-    if (array == NULL || size <= 1) {
-        return; // No need to sort an array of size 0 or 1
+void selection_sort(intarray, size_t size)
+{
+    size_t i, min_index, j;
+
+    if (array == NULL || size <= 1)
+    {
+        return;
     }
 
-    for (size_t i = 0; i < size - 1; ++i) {
-        size_t min_index = i;
+    for (i = 0; i < size - 1; ++i)
+    {
+        min_index = i;
 
-        for (size_t j = i + 1; j < size; ++j) {
-            if (array[j] < array[min_index]) {
+        for (j = i + 1; j < size; ++j)
+        {
+            if (array[j] < array[min_index])
+            {
                 min_index = j;
             }
         }
 
-        if (min_index != i) {
+        if (min_index != i)
+        {
             swap(&array[i], &array[min_index]);
         }
     }
