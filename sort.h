@@ -24,11 +24,8 @@ void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void swap(int *a, int *b);
-<<<<<<< HEAD
 int lomuto_partition(int *array, int low, int high, size_t size);
 void quick_sort_recursive(int *array, int low, int high, size_t size);
 void quick_sort(int *array, size_t size);
-=======
->>>>>>> 8c0a85f2f6bdbb640740dad9730e9bb2032a4125
 
 #endif /* SORT_H */
